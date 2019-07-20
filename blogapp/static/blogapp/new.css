@@ -1,0 +1,89 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+.container{
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.container h4{
+    text-align: center;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+*:focus {
+    outline: none;
+}
+
+textarea {
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: solid 0.7px lightgray;
+    font-size: 16px;
+    resize: both;
+}
+
+textarea:focus { 
+    background-color: #f6fefa; 
+    border: none;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: solid 0.7px lightgray;
+}
+input[type="text"]:focus { 
+    background-color: #f9f3e9; 
+    border: none;
+}
+
+/* 버튼*/
+button{
+    float: right;
+    background:#1AAB8A;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:40px;
+    font-size:14px;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+  }
+  button:hover{
+    background:#fff;
+    color:#1AAB8A;
+  }
+  button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+  }
+  button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
+  

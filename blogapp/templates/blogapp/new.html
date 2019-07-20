@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+{% block css%}
+<link rel = "stylesheet" type = "text/css" href = "{%static 'blogapp/new.css'%}" >
+{% endblock%}
+
+{% block contents %}
+<div class="container">
+    <form action="{% url 'create' %}">
+    {% csrf_token %}
+        <h4>제목</h4>
+        <input type="text" name="title">
+        <br>
+        <br>
+        <h4>본문</h4>
+        <textarea cols=40 rows=10 name="body"></textarea>
+        <br>
+        <br>
+        <br>
+        <button type="submit">작성하기</button>
+    </form>
+</div>
+
+{% endblock %}

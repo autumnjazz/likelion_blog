@@ -1,0 +1,45 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+.aboutme{
+    width: 68%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    text-align: center;
+} 
+
+
+/* 내소개 */
+.aboutme img{
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+    margin: 20px;
+    box-shadow: 5px 5px 6px -2px gray;
+}
+
+.mebox{
+    font-size: 15px;
+    text-align: center;
+    margin: 50px;
+    /* text-align: justify; */
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+}
+/* 
+.mebox:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.mebox1{
+    float:left;
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+ .mebox2{    
+    float: right;
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+}  */

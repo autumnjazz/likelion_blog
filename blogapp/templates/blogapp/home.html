@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+{% block css%}
+<link rel="stylesheet" type="text/css" href="{%static 'blogapp/home.css'%}">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+{% endblock%}
+
+{% block contents %}
+
+{% for blog in posts %}
+<div class="contents">
+    <h1>{{blog.title}}</h1>
+    <div id="date">{{blog.pub_date.year}}년 {{blog.pub_date.month}}월 {{blog.pub_date.day}}일, {{blog.pub_date.time}}</div>
+    <div id="txt">{{blog.summary}}<a href="{% url 'detail' blog.id %}"> ... 더보기</a></div>
+</div>
+{% endfor %}
+
+<div class="page">
+    <div class="pagenum">
+        {% if posts.has_previous %}
+        <span><a href="?page=1">처음</a></span>
+        <span><a href="?page={{posts.previous_page_number}}">←</a></span>
+        {%endif%} 
+        <span>{{posts.number}}</span>
+        <span>/</span>
+        <span>{{posts.paginator.num_pages}}</span>
+        
+        {% if posts.has_next %}
+        <span><a href="?page={{posts.next_page_number}}">→</a></span>
+        <span><a href="?page={{posts.paginator.num_pages}}">마지막</a></span>
+        {%endif%}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+
+{% load staticfiles %}
+{% block css%}
+<link rel = "stylesheet" type = "text/css" href = "{%static 'blogapp/about.css'%}" >
+{% endblock%}
+
+{% block contents %}
+    <div class="aboutme">
+        <img src="{%static 'blogapp/kiwi-bird.jpg' %}">
+        <div class="mebox">
+            안녕하세요. 멋쟁이 사자처럼 7기 장다래입니다. <br>
+            중앙 강의를 참고하여 글 작성, 페이지네이션을 만들고,<br>
+            시립대 멋사 강의에서 배운 글 수정 및 삭제 기능, 댓글 작성 기능을 추가했습니다.<br>
+            댓글 삭제도 가능하며, 댓글은 홀수번째, 짝수번째의 색이 다릅니다!<br>
+            공지 글은 수정/삭제가 불가능합니다.<br>
+            <!-- <div class="mebox1"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa voluptates amet neque
+                velit corrupti sint! Similique, perferendis beatae autem animi, nisi dolores quia asperiores fugit iste
+                voluptates fuga assumenda soluta.
+            </div>
+            <div class="mebox2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsam, aut quos
+                enim corrupti exercitationem fugiat minus dolor animi ea, doloremque qui neque consequatur iusto
+                accusantium ex, ipsa quia nostrum!
+            </div> -->
+        </div>
+    </div>
+{% endblock %}

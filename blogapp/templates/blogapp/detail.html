@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+{% block css%}
+<link rel="stylesheet" type="text/css" href="{%static 'blogapp/home.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'blogapp/detail.css'%}">
+{% endblock%}
+
+{% block contents %}
+
+<div class="contents">
+    <h2>{{blog.title}}</h2>
+    <div id="date">{{blog.pub_date.year}}년 {{blog.pub_date.month}}월 {{blog.pub_date.day}}일, {{blog.pub_date.time}}</div>
+    {% if blog.id != 13%}
+    <div id="date">
+        <a href="{% url 'delete' blog.id%}">삭제</a>
+        <a href="{% url 'edit' blog.id%}">수정</a>
+    </div>
+    {% endif %}
+    <div id="txt">{{blog.body}}</div>
+</div>
+
+
+<div class="commentArea">
+    <form method="POST" action="{% url 'comment_create' blog.id%}" class="writeComment">
+        {% csrf_token %}
+        <textarea name="content"></textarea>
+        <button>작성하기</button>
+    </form>
+
+    <div id="count">
+        {{blog.comment_set.count}} 개의 댓글
+    </div>
+
+    {% for comment in blog.comment_set.all %}
+    <div class="written">
+        {{ comment.content |linebreaks }}
+        <div id="date"><a href="{% url 'comment_delete' blog.id comment.id%}">삭제</a></div>
+        <div id="date">{{comment.pub_date}}</div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,86 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+.commentArea {
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.writeComment {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin-bottom: 40px;
+}
+
+*:focus {
+    outline: none;
+}
+
+textarea {
+    grid-column: 1/2;
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: solid 0.7px lightgray;
+    font-size: 16px;
+    resize: both;
+}
+
+textarea:focus {
+    background-color: #f6fefa;
+    border: none;
+}
+
+button {
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    grid-column: 2/3;
+    background-color: white;
+    border: solid 0.7px lightgray;
+    padding: 15px 30px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #1AAB8A;
+    color: white;
+}
+
+.written{
+    margin: 20px;
+    padding:10px;
+}
+
+.written:nth-child(odd) {
+    background-color: #f9fefc;
+}
+
+.written:nth-child(even) {
+    background-color: #fdfbf8;
+}
+
+
+.written a{
+    color: lightblue;
+    font-size: 12px;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+#count{
+    font-size: 14px;
+    color: lightgray;
+    text-align: right;
+    margin: 10px;
+}
+
